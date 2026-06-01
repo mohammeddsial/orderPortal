@@ -1223,10 +1223,7 @@ section.hero{
   top: 0;
   left: 0;
 }
-.process-step-content.dark{
-  background:transparent;
 
-}
 .step-badges-simple{
  
 display: flex;
@@ -1347,6 +1344,7 @@ gap: 20px;
 .process-step-content.dark{
 display: flex;
 flex-direction: row;
+background: transparent
 }
 
 .process-step-img.step-dark-bg {
