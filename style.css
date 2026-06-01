@@ -1200,6 +1200,10 @@ section.hero{
 .step-badge-number.dark{
   position: relative;
 }
+.process-step-content.dark{
+  background:transparent;
+  
+}
 /* The main white card (Everything your restaurant needs...) */
 .process-info-card {
   position: absolute;
