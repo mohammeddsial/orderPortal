@@ -1150,7 +1150,14 @@ section.hero{
   border-radius: 24px;
 }
 .iphone-in-image{
-  right: 100px; bottom: 13px; height: 416px;
+  right: 0px; bottom: 13px; height: 416px;
+}
+.iphone-in-image.right{
+  right: 100px;
+}
+.iphone-in-image.left{
+  right: auto;
+  left: 20px;
 }
 .process-step-content {
   background: #F5F5F5;
