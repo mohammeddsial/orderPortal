@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrderPortal — AI Direct Ordering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="container">
+      <!-- dot pattern -->
+      <img class="hero-pattern" src="./images/hero-pattern.png" alt="" />
+
+      <!-- Navbar -->
+      <div class="hero-nav">
+        <nav class="navbar">
+          <a href="/" class="nav-logo">
+            <img src="./images/logo.png" alt="OrderPortal logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
+          <div class="nav-actions">
+            <button class="btn-sign-in">Sign in</button>
+            <button class="btn-get-started">
+              Get started
+              <span class="arr-sm"><img src="./images/nav-arrow.png" alt="" /></span>
+            </button>
+          </div>
+          <button class="nav-hamburger" onclick="toggleNav(this)" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+        <div class="nav-mobile-menu" id="mobileMenu">
+          <a href="#features" onclick="closeMobileNav()">Features</a>
+          <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+          <a href="#about" onclick="closeMobileNav()">About</a>
+          <a href="#resources" onclick="closeMobileNav()">Resources</a>
+          <div class="mob-actions">
+            <button class="btn-sign-in" style="flex:1;">Sign in</button>
+            <button class="btn-get-started" style="flex:1;justify-content:center;">Get started</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup group (MacBook + iPhone + stat cards) -->
+      <div class="mockup-group">
+        <div class="hero-blobs">
+          <img src="./images/hero-blobs.png" alt="" />
+        </div>
+        <div class="macbook-wrap">
+          <div class="macbook-inner">
+            <div class="mac-screen">
+              <img class="s1" src="./images/mockup wrap.png" alt="App dashboard" />
+            </div>
+          </div>
+        </div>
+        <div class="iphone-wrap">
+          <div class="iphone-screen">
+            <div class="iphone-screen-img-wrap p1">
+              <img src="./images/ed6237fe-3d84-4477-a365-b034e7222d5d.png" alt="Foody app" />
+            </div>
+          </div>
+          <div class="iphone-pill"></div>
+          <div class="iphone-btn iphone-btn-vol1"><img
+              src="https://www.figma.com/api/mcp/asset/011e27d9-31e1-440a-9c42-2063c3ecc1d3" alt="" /></div>
+          <div class="iphone-btn iphone-btn-vol2"><img
+              src="https://www.figma.com/api/mcp/asset/e461590a-013a-4351-8302-2504b1fe272c" alt="" /></div>
+          <div class="iphone-btn iphone-btn-vol3"><img
+              src="https://www.figma.com/api/mcp/asset/e461590a-013a-4351-8302-2504b1fe272c" alt="" /></div>
+          <div class="iphone-btn iphone-btn-pwr"><img
+              src="https://www.figma.com/api/mcp/asset/d8b2bc75-0907-470f-abf5-38159e5d2424" alt="" /></div>
+          <div class="iphone-ring1"></div>
+          <div class="iphone-ring2"></div>
+        </div>
+        <!-- Stat cards -->
+        <div class="card-orders">
+          <img class="c-ellipse" src="./images/order-icon.png" alt="" />
+          <img class="c-icon" src="./images/task-01.png" alt="" />
+          <div class="c-body">
+            <div class="c-label">Todays Orders</div>
+            <div class="c-value"><span class="c-num">28</span><span class="c-unit">&nbsp;Orders</span></div>
+          </div>
+        </div>
+        <div class="card-process">
+          <img class="c-ellipse" src="./images/Ellipse 2.png" alt="" />
+          <img class="c-icon" src="./images/order-icon.png" alt="" />
+          <div class="c-body">
+            <div class="c-label">In Process</div>
+            <div class="c-value">7 <span class="c-unit">Orders</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero text overlay -->
+    <div class="hero-text">
+      <div class="hero-content">
+        <div class="hero-title-block">
+          <h1 class="hero-title">You're losing sales online.</h1>
+          <p class="hero-sub">Use AI to take orders via DM.</p>
+        </div>
+        <div class="hero-cta-block">
+          <div class="hero-ctas">
+            <a href="#" class="btn-hero-dark">
+              Start free trial
+              <span class="arr-md"><img src="./images/nav-arrow.png" alt="" /></span>
+            </a>
+            <a href="#" class="btn-hero-outline">See how it works</a>
+          </div>
+          <div class="hero-rating">
+            <span class="hero-rating-text">4.9/5 Rated</span>
+            <div class="stars">
+              <img src="./images/star.png" alt="★" />
+              <img src="./images/star.png" alt="★" />
+              <img src="./images/star.png" alt="★" />
+              <img src="./images/star.png" alt="★" />
+              <img src="./images/star.png" alt="★" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS BAR ================= -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">£0</div>
+          <div class="stat-label">Commission</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">300+</div>
+          <div class="stat-label">Restaurants</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">48h</div>
+          <div class="stat-label">Setup time</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2.4×</div>
+          <div class="stat-label">Repeat orders</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section-features" id="features">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-tag">The Platform</p>
+        <h2 class="section-title-lg">Everything you need to own<br>your orders.</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-col">
+          <div class="feature-item">
+            <div class="feature-icon"><img
+                src="https://www.figma.com/api/mcp/asset/ff2e99bc-6d5e-4127-9ed8-98360b924a66" alt="" /></div>
+            <div>
+              <div class="feature-category">Online Ordering</div>
+              <div class="feature-name">Your branded ordering page</div>
+              <p class="feature-desc">A beautiful mobile-first ordering experience with your branding, menu, and zero
+                commission.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><img
+                src="https://www.figma.com/api/mcp/asset/52fcc5b0-333b-449a-b9a3-14d2addd6544" alt="" /></div>
+            <div>
+              <div class="feature-category">Delivery</div>
+              <div class="feature-name">Commission-free delivery</div>
+              <p class="feature-desc">Offer delivery without paying 30% fees. Integrate with your existing couriers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature-col-center">
+          <div class="feature-item">
+            <div class="feature-icon"><img
+                src="https://www.figma.com/api/mcp/asset/7fb4048b-d8d7-4bdc-9edc-c975a715aa95" alt="" /></div>
+            <div>
+              <div class="feature-category">Real-time analytics</div>
+              <div class="feature-name">Real-time analytics</div>
+              <p class="feature-desc">Track orders, revenue, and customer behavior in one powerful dashboard.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><img
+                src="https://www.figma.com/api/mcp/asset/89aa2468-3ac8-4aa4-b71f-9cdda70740f0" alt="" /></div>
+            <div>
+              <div class="feature-category">Direct customer connection</div>
+              <div class="feature-name">Direct customer connection</div>
+              <p class="feature-desc">Own the relationship. Send promotions and updates directly to your customers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature-col">
+          <div class="feature-item">
+            <div class="feature-icon"><img
+                src="https://www.figma.com/api/mcp/asset/7fb4048b-d8d7-4bdc-9edc-c975a715aa95" alt="" /></div>
+            <div>
+              <div class="feature-category">Build lasting relationships</div>
+              <div class="feature-name">Build lasting relationships</div>
+              <p class="feature-desc">SMS campaigns and loyalty programs that keep customers coming back.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><img
+                src="https://www.figma.com/api/mcp/asset/89aa2468-3ac8-4aa4-b71f-9cdda70740f0" alt="" /></div>
+            <div>
+              <div class="feature-category">Scale effortlessly</div>
+              <div class="feature-name">Scale effortlessly</div>
+              <p class="feature-desc">Manage multiple locations from one dashboard with unified reporting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APP DEMO ================= -->
+  <section class="section-app-demo">
+    <div class="container">
+      <div class="app-demo-heading">
+        <p class="section-tag">With OrderPortal</p>
+        <h2 class="section-title-lg" style="color:#000;">More reach. More loyalty.<br>On your terms, not a platform's.
+        </h2>
+      </div>
+      <div class="app-demo-grid">
+        <div class="app-demo-visuals">
+          <div class="app-demo-img-top">
+            <img src="https://www.figma.com/api/mcp/asset/933e72d5-55dc-4997-8b72-a37c1bfa0dd6" alt="Restaurant" />
+            <div class="o-notif">
+              <div class="o-notif-label">Sales this month</div>
+              <div class="o-notif-value">+24%</div>
+              <div class="o-notif-sub">vs last month</div>
+            </div>
+          </div>
+          <div class="app-demo-img-row">
+            <div class="app-demo-img-dark">
+              <img src="https://www.figma.com/api/mcp/asset/7fe84e7b-be64-45ba-aa7e-a7743fc3d9fa" alt="" />
+              <div class="mini-ui">
+                <div class="mini-search">Search food...</div>
+                <div class="mini-item">
+                  <img class="mini-item-img"
+                    src="https://www.figma.com/api/mcp/asset/a0ef8c94-774c-47dc-bd6c-c93de44a885e" alt="" />
+                  <div>
+                    <div class="mini-item-name">Crispy Fried Chicken</div>
+                    <div class="mini-item-sub">Freshly fried, served with a side of slaw</div>
+                    <div class="mini-stars">4.9/5&nbsp;<img src="./images/chicken.png" alt="★" /><img
+                        src="https://www.figma.com/api/mcp/asset/037199b7-f439-4f55-92c8-963e8455e18a" alt="★" /></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="app-demo-img-pink">
+              <div style="position:absolute;left:20px;top:103px;transform:rotate(-5deg);">
+                <div class="ocard" style="width:295px;"><img class="ocard-img"
+                    src="https://www.figma.com/api/mcp/asset/a0ef8c94-774c-47dc-bd6c-c93de44a885e" alt=""
+                    style="width:100px;height:100px;" />
+                  <div class="ocard-body">
+                    <div class="ocard-name">Crispy Fried Chicken</div>
+                    <div class="ocard-sub">Freshly fried, served with a side of slaw</div>
+                    <div class="ocard-price">$10.50</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-demo-content">
+          <div class="feat-icon"><img src="./images/zap-fast.svg" alt="" /></div>
+          <p class="app-demo-h2">Your customers, your relationship - always</p>
+          <ul class="check-list">
+            <li><img src="./images/red-check.png" alt="✓" /><span>A branded hub your customers recognize and
+                trust</span></li>
+            <li><img src="./images/red-check.png" alt="✓" /><span>Push notifications, promos, and loyalty rewards sent
+                directly to their phones</span></li>
+            <li><img src="./images/red-check.png" alt="✓" /><span>Full customer data ownership: know who orders, how
+                often, and what they love</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SCORE SECTION ================= -->
+  <section class="section-score" id="pricing">
+    <div class="container">
+      <div class="score-top">
+        <div class="score-inner">
+          <div class="score-head">
+            <p class="score-tag-y">Free tool for Canadian restaurants</p>
+            <h2 class="score-title">How ordering-ready<br>is your website?</h2>
+            <p class="score-desc">We built a free tool that grades your restaurant's marketing and customer reach: from
+              how easy it is for customers to find you, to whether you have a direct way to bring them back. See your
+              score and see what to fix first.</p>
+          </div>
+          <div class="score-cta-col">
+            <a href="#" class="btn-pink"><span class="score-cta-text">Check your restaurant's score</span><span
+                class="score-free">free</span></a>
+            <p class="score-sub">Most restaurants score below 60. Where do you stand?</p>
+          </div>
+        </div>
+      </div>
+      <div class="score-img-wrap">
+        <div class="score-img">
+          <img class="sbg" src="https://www.figma.com/api/mcp/asset/16c17644-6eb3-48fe-b5d3-0c0b3e2be504"
+            alt="Score dashboard" />
+          <div class="score-notif n1">
+            <div class="o-notif-label">Repeat customer visits</div>
+            <div class="o-notif-value">+31%</div>
+            <div class="o-notif-sub">last 30 days</div>
+          </div>
+          <div class="score-notif n2">
+            <div class="o-notif-label">Push notification open rate</div>
+            <div class="o-notif-value">+47%</div>
+            <div class="o-notif-sub">above industry avg</div>
+          </div>
+          <div class="score-phone"><img src="https://www.figma.com/api/mcp/asset/cdfada30-f5c3-494c-979a-e86b91eccf82"
+              alt="" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="section-process">
+    <div class="container">
+      <div style="max-width:1440px; margin:0 auto;">
+        <h2 class="process-title">From first call to live app<br>in weeks, not months</h2>
+        <div class="process-steps">
+
+          <!-- STEP 01 – exactly matching motion.png -->
+          <div class="process-step">
+            <div class="process-step-img reletive" style="background: #e8d8e0; ">
+              <!-- "01" badge (circular) -->
+              <div class="step-badge-number">01</div>
+
+              <!-- Floating order card: "New direct order $52.00" -->
+              <div class="test-notif" style="right: -25px; top: 37%; left: auto;">
+                <div class="o-notif-label">New direct order</div>
+                <div class="o-notif-value">$52.00</div>
+              </div>
+
+              <!-- Main white card with full text + button -->
+
+              <img class="absolute" src="./images/w-wlak-iphone.png" alt="Everything your resturent need"
+                style=" height: 316px; bottom: 40px; left: 40px;">
+
+
+              <!-- Background image (kept subtle) -->
+              <img src="./images/we-walk.png" alt="" style="width:100%; height:100%; object-fit: cover; ">
+            </div>
+
+            <div class="process-step-content">
+              <div class="feat-icon"><img src="./images/zap-fast.svg" alt="" /></div>
+              <h3 class="process-step-title">We Talk (15 min)</h3>
+              <p class="process-step-desc">Quick call to understand your restaurant, your menu, and what matters to you.
+                No pitch — just a conversation.</p>
+            </div>
+          </div>
+
+          <!-- STEP 02 – matches motion-1.png (order list inside image) -->
+          <div class="process-step flip">
+            <div class="process-step-content">
+              <div class="feat-icon"><img src="./images/zap-fast.svg" alt="" /></div>
+              <h3 class="process-step-title">We Build Your App</h3>
+              <p class="process-step-desc">Your brand, your menu, your loyalty program — designed and developed. You see
+                mockups before anything goes live.</p>
+            </div>
+            <div class="process-step-img reletive">
+              <div class="step-badge-number">02</div>
+              <!-- Floating order notification -->
+              <div class="test-notif" style="right: auto; left: 0px;">
+                <div class="o-notif-label">New direct order</div>
+                <div class="o-notif-value">$52.00</div>
+              </div>
+
+              <!-- Order list mockup -->
+
+              <img class="absolute" src="./images/bulid-you-iPhone 14 Pro.png" alt="We Build Your App"
+                style=" right: 100px; bottom: 13px; height: 416px;">
+
+
+              <img src="./images/build-your.png" alt="" style="width:100%; height:100%; object-fit: cover;">
+            </div>
+          </div>
+
+          <!-- STEP 03 – FULL REDESIGN to match motion2.png -->
+          <!-- STEP 03 – matching the simple motion2.png (no cocktail list) -->
+          <div class="process-step step-dark">
+            <!-- left side: badges only -->
+            <div class="process-step-img step-dark-bg" style="background: #0a0a0a; position: relative;">
+              <!-- Circular "03" badge -->
+              <div class="step-badge-number" style="background:#fff; color:#000; bottom: 50%;">03</div>
+
+              <!-- Two badges (stacked or side by side) -->
+              <div class="step-badges-simple">
+                <div class="badge-simple">
+                  <div class="badge-label">App Status</div>
+                  <div class="badge-value">Live</div>
+                </div>
+                <div class="badge-simple">
+                  <div class="badge-value">+124</div>
+                  <div class="badge-label">Direct Orders</div>
+                </div>
+              </div>
+
+
+
+              <h3 class="process-step-title">You Launch &amp; Keep the Margin</h3>
+              <p class="process-step-desc">Your app goes live. Customers start ordering direct. You stop paying 30% on
+                repeat orders.</p>
+              <a href="#" class="btn-pink">Book Your 15-Minute Call <span class="arr">→</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FUTURE ================= -->
+  <section class="section-future">
+    <div class="container">
+      <div class="future-inner">
+        <div class="future-left">
+          <div class="future-heading">
+            <p class="future-tagline">This isn't a workaround.</p>
+            <h2 class="future-title">It's your<br>restaurant's<br>future.</h2>
+          </div>
+          <div class="future-actions">
+            <a href="#" class="btn-accent">Start free trial <span class="arr-md"><img
+                  src="https://www.figma.com/api/mcp/asset/bc272547-3a22-4d82-a4cf-df9aa4b3f796" alt="" /></span></a>
+            <a href="#" class="btn-ol-dark">Book a demo</a>
+          </div>
+        </div>
+        <div class="future-img">
+          <img src="./images/mock.png" alt="Dashboard" />
+          <div class="future-notif" style="width: 306px;">
+            <div class="o-notif-label">New direct order</div>
+            <div class="o-notif-value">$52.00</div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stats-row-item">
+          <div class="stats-row-num">24/7</div>
+          <div class="stats-row-lbl">Availability</div>
+        </div>
+        <div class="stats-row-item">
+          <div class="stats-row-num">7 Days</div>
+          <div class="stats-row-lbl">Setup or less</div>
+        </div>
+        <div class="stats-row-item">
+          <div class="stats-row-num">100%</div>
+          <div class="stats-row-lbl">Revenue yours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIAL ================= -->
+
+  <section class="section-testimonial">
+    <div class="container">
+      <div class="testimonial-inner">
+        <div class="test-left">
+          <div>
+            <p class="test-name">Ahmed K. — Halal Bros Kitchen, London</p>
+            <p class="test-stat">+41%</p>
+          </div>
+          <div>
+            <p class="test-saving">$28,000 saved in year one</p>
+            <p class="test-quote">"OrderPortal is the secret to our direct revenue growth. Our guests love ordering
+              straight from us."</p>
+          </div>
+          <a href="#" class="test-link">Read their story &rarr;</a>
+        </div>
+        <div class="test-right">
+          <img class="test-photo" src="./images/ahmed-k.png" alt="Ahmed K." />
+          <div class="test-notif">
+            <div class="o-notif-label">New direct order</div>
+            <div class="o-notif-value">$52.00</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= REVIEWS MARQUEE ================= -->
+  <section class="section-reviews">
+    <div class="container">
+      <div class="marquee-outer">
+        <div class="marquee-track" aria-hidden="true">
+          <span class="marquee-text">Hear from our restaurants ♥</span><span class="marquee-text">Hear from our
+            restaurants ♥</span>
+          <span class="marquee-text">Hear from our restaurants ♥</span><span class="marquee-text">Hear from our
+            restaurants ♥</span>
+          <span class="marquee-text">Hear from our restaurants ♥</span><span class="marquee-text">Hear from our
+            restaurants ♥</span>
+          <span class="marquee-text">Hear from our restaurants ♥</span><span class="marquee-text">Hear from our
+            restaurants ♥</span>
+        </div>
+      </div>
+      <div class="review-cards">
+        <div class="review-card">
+          <p class="review-card-text">Since switching to OrderPortal, we've saved over £2,000 a month in commission
+            fees. Our customers love ordering directly from us.</p>
+          <div>
+            <div class="review-card-author">Sarah Chen</div>
+            <div class="review-card-rest">Golden Dragon</div>
+          </div>
+        </div>
+        <div class="review-card">
+          <p class="review-card-text">The loyalty features have helped us build a community of regulars who order
+            directly. No more losing customers to third-party apps.</p>
+          <div>
+            <div class="review-card-author">Marcus Johnson</div>
+            <div class="review-card-rest">The Local Bistro</div>
+          </div>
+        </div>
+        <div class="review-card">
+          <p class="review-card-text">Setup took less than a day. Now we're processing 150+ orders weekly with zero
+            commission. Best decision we made this year.</p>
+          <div>
+            <div class="review-card-author">Priya Patel</div>
+            <div class="review-card-rest">Spice Route</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section-faq">
+    <div class="container">
+      <h2 class="faq-title">Questions?</h2>
+      <div class="faq-box">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">I already have a website with online
+              ordering.</span><img class="faq-chevron" src="./images/chevrondown.png" alt="" /></div>
+          <div class="faq-a">
+            <p class="faq-a-text">Great — we integrate with your existing site or replace the ordering layer entirely.
+              You keep your brand, your domain, and your customer data. No starting from scratch.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from UberEats or
+              DoorDash?</span><img class="faq-chevron" src="./images/chevrondown.png" alt="" /></div>
+          <div class="faq-a">
+            <p class="faq-a-text">They take 15–30% commission and own your customer relationship. OrderPortal is your
+              own branded ordering channel — zero commission, full data ownership, and direct contact with every
+              customer.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">I'm a small restaurant. Is this worth
+              it?</span><img class="faq-chevron" src="./images/chevrondown.png" alt="" /></div>
+          <div class="faq-a">
+            <p class="faq-a-text">Absolutely. Even a restaurant with 100 regular customers can dramatically grow revenue
+              just by reaching those people directly: a push notification on a slow night, a birthday reward, a new menu
+              item announcement. We built this for independent operators first.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does it cost?</span><img
+              class="faq-chevron" src="./images/chevrondown.png" alt="" /></div>
+          <div class="faq-a">
+            <p class="faq-a-text">A flat monthly subscription with no commission, no hidden fees, no contracts. Most
+              restaurants save more in commission in their first month than the entire year of OrderPortal costs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How long does it take to
+              build?</span><img class="faq-chevron" src="./images/chevrondown.png" alt="" /></div>
+          <div class="faq-a">
+            <p class="faq-a-text">Every restaurant is different, but we move fast. We handle everything: menu, branding,
+              payment setup, and launch. You'll be surprised how quickly it comes together.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What if my customers don't download the
+              app?</span><img class="faq-chevron" src="./images/chevrondown.png" alt="" /></div>
+          <div class="faq-a">
+            <p class="faq-a-text">There's nothing to download. Your ordering page works in any browser. Customers tap a
+              link and order — no app store required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="section-final">
+    <div class="container">
+      <div class="final-inner">
+        <img class="final-bg" src="./images/final-cta.png" alt="" />
+
+        <div class="final-content">
+          <div class="final-left">
+            <h2 class="final-title">15 minutes.<br>No pitch.<br>Just a look at<br>what's possible.</h2>
+            <p class="final-desc">We'll walk through your current setup, show you what's possible with direct ordering,
+              and answer every question — no pitch, no pressure.</p>
+            <div class="final-actions">
+              <div class="final-btns">
+                <a href="#" class="btn-accent">Book Your Free 15-Minute Call <span class="arr-md"><img
+                      src="./images/nav-arrow.png" alt="" /></span></a>
+                <a href="#" class="btn-ol-light">Or check your score first &rarr;</a>
+              </div>
+              <div class="trust-row">
+                <div class="trust-item"><span class="trust-check">✓</span><span class="trust-text">Built in Kitchener,
+                    ON</span></div>
+                <div class="trust-item"><span class="trust-check">✓</span><span class="trust-text">Made for restaurants
+                    in Ontario</span></div>
+                <div class="trust-item"><span class="trust-check">✓</span><span class="trust-text">Real results, not
+                    templates</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="final-phone"><img src="./images/final-cta-iphone.png" alt="App" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><img src="./images/footer-logo.png" alt="OrderPortal" /></a>
+          <p class="footer-tagline">Take back control of your restaurant's online ordering.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Product</p>
+          <ul class="footer-links">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Roadmap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Support</p>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 OrderPortal. All rights reserved.</p>
+        <div class="footer-socials"><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
