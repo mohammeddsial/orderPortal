@@ -1277,7 +1277,9 @@ section.hero{
   position: relative;
   overflow: hidden;
 }
-.process-step-img.step-dark {
+
+
+.process-step-img.step-dark-bg {
   background: url(./images/lunch-bg.png) no-repeat center center;
  
   display: flex;
@@ -1285,11 +1287,6 @@ section.hero{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* left: cocktail/badges, right: text */
-}
-
-.process-step-img.step-dark-bg {
-  background: #111;
   position: relative;
   padding: 48px 32px;
   height: 100%;
