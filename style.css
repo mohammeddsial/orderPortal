@@ -1172,6 +1172,19 @@ section.hero{
   letter-spacing: -1px;
   margin-bottom: 16px;
 }
+.step-dark-content-inner-left{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 48px 32px;
+  border-radius: 24px;
+  overflow: hidden;
+  z-index: 2;
+}
 .process-step-title.dark{
   color: #fff;
 }
