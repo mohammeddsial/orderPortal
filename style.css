@@ -1202,7 +1202,7 @@ section.hero{
 }
 .process-step-content.dark{
   background:transparent;
-  
+
 }
 /* The main white card (Everything your restaurant needs...) */
 .process-info-card {
@@ -1847,8 +1847,8 @@ section.hero{
 }
 .build-app{
   top: 37%;
-  left: auto;
-  right: 0px;
+  left: -20px;
+  right: auto;
 }
 /* Reviews Marquee */
 .section-reviews {
