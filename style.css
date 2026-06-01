@@ -1274,7 +1274,7 @@ section.hero{
 
 /* === Process Step 03 – Dark Themed === */
 .process-step.step-dark{
-  position: absolute
+  position: relative;
 }
 .process-step.step-dark {
   background: url(./images/lunch-bg.png) no-repeat center center;
