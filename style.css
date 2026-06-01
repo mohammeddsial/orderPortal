@@ -1131,7 +1131,9 @@ section.hero{
   column-gap: 48px;
   overflow: hidden;
 }
-
+.process-step.dark{
+  grid-template-columns: 1fr 500px;
+}
 .process-step.flip {
   grid-template-columns: 1fr 500px;
 }
