@@ -1344,7 +1344,8 @@ gap: 20px;
 .process-step-content.dark{
 display: flex;
 flex-direction: row;
-background: transparent
+background: transparent;
+flex-start:flex-end;
 }
 
 .process-step-img.step-dark-bg {
