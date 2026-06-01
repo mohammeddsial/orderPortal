@@ -1131,7 +1131,7 @@ section.hero{
   column-gap: 48px;
   overflow: hidden;
 }
-.process-step.dark{
+.process-step.step-dark{
   grid-template-columns: 1fr 500px;
 }
 .process-step.flip {
@@ -1219,6 +1219,8 @@ section.hero{
 }
 .step-badge-number.dark{
   position: relative;
+  top: 0;
+  left: 0;
 }
 .process-step-content.dark{
   background:transparent;
