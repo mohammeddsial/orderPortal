@@ -1132,7 +1132,7 @@ section.hero{
   overflow: hidden;
 }
 .process-step.step-dark{
-  grid-template-columns: 1fr 500px;
+  display: flex;
 }
 .process-step.flip {
   grid-template-columns: 1fr 500px;
@@ -1238,6 +1238,7 @@ gap: 20px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(229, 220, 220, 0.80);
   padding: 12px 16px;
+  width: 100%;
 }
 .badge-simple .badge-label{
   color: #000;
