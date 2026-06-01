@@ -1,4 +1,4 @@
-# auto-deploy.ps1 - Simple file watcher with loop + Vercel deploy
+# auto-deploy.ps1 - File watcher + Git push + Vercel production deploy
 $watchFolder = Get-Location
 $waitSeconds = 2
 
@@ -30,14 +30,14 @@ while ($true) {
         } else {
             Write-Host "Pushed to remote" -ForegroundColor Green
             
-            # ---- Deploy to Vercel after successful push ----
-            Write-Host "🚀 Deploying to Vercel..." -ForegroundColor Magenta
-           vercel --prod --yes
-if ($LASTEXITCODE -eq 0) {
-    Write-Host "✅ Vercel production deployment done" -ForegroundColor Green
-} else {
-    Write-Host "⚠️ Vercel deploy failed (run 'vercel link' first or check token)" -ForegroundColor Yellow
-}
+            # ----- Vercel production deployment -----
+            Write-Host "Deploying to Vercel production..." -ForegroundColor Magenta
+            vercel --prod --yes
+            if ($LASTEXITCODE -eq 0) {
+                Write-Host "✅ Vercel production deployment done" -ForegroundColor Green
+            } else {
+                Write-Host "⚠️ Vercel deploy failed. Make sure you have run 'vercel link' and are logged in." -ForegroundColor Yellow
+            }
         }
     }
     Start-Sleep -Seconds $waitSeconds
