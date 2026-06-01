@@ -670,7 +670,7 @@ section.hero{
   gap: 64px;
   align-items: center;
   margin-top: 64px;
-  max-width: 1240px;
+  
   margin-left: auto;
   margin-right: auto;
 }
@@ -757,7 +757,7 @@ section.hero{
   display: flex;
   gap: 96px;
   align-items: center;
-  max-width: 1240px;
+  
   margin: 0 auto;
 }
 
@@ -1113,14 +1113,14 @@ section.hero{
   letter-spacing: -2px;
   color: #0f0f0f;
   margin-bottom: 64px;
-  max-width: 1240px;
+  
 }
 
 .process-steps {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  max-width: 1240px;
+  
 }
 
 .process-step {
@@ -1606,7 +1606,7 @@ section.hero{
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  max-width: 1240px;
+  
   margin: 0 auto;
 }
 
@@ -1755,7 +1755,7 @@ section.hero{
   display: flex;
   gap: 64px;
   align-items: center;
-  max-width: 1240px;
+  
   justify-content: space-between;
   margin: 0 auto;
 }
