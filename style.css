@@ -1299,6 +1299,7 @@ section.hero{
   padding: 48px 32px;
   border-radius: 24px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .step-number-badge {
