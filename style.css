@@ -1283,12 +1283,10 @@ section.hero{
 
 
 .process-step-img.step-dark-bg {
-  background: url('./images/lunch.png') no-repeat center center; background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 48px 32px;
-  height: 100%;
-  width: 100%;
+ position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .step-number-badge {
@@ -1564,9 +1562,7 @@ section.hero{
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .process-step.step-dark {
-    grid-template-columns: 1fr 380px;
-  }
+  
 
   .cocktail-list {
     font-size: 11px;
