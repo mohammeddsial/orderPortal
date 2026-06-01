@@ -1274,6 +1274,7 @@ section.hero{
 
 /* === Process Step 03 – Dark Themed === */
 .process-step.step-dark{
+  grid-template-columns: 1fr 380px;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -1582,7 +1583,7 @@ section.hero{
 
 @media (max-width: 768px) {
   .process-step.step-dark {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 380px;
   }
 
   .cocktail-list {
