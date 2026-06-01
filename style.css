@@ -1276,15 +1276,18 @@ section.hero{
 .process-step.step-dark{
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 
 .process-step-img.step-dark-bg {
-  background: url('./images/lunch-bg.png') no-repeat center center; background-size: cover;
+  background: url('./images/lunch.png') no-repeat center center; background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 48px 32px;
   height: 100%;
+  width: 100%;
 }
 
 .step-number-badge {
