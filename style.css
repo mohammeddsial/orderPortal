@@ -35,6 +35,9 @@ section{
   padding: 0;
 }
 /* --- Hero & Layout --- */
+section.hero{
+  padding: 0 0 100px 0;
+}
 .hero {
   position: relative;
   background: #fff;
@@ -1063,20 +1066,20 @@ section{
 }
 
 .score-notif.n1 {
-  right: -38px;
+  left: -38px;
   top: 67px;
   width: 280px;
 }
 
 .score-notif.n2 {
-  right: -38px;
+  left: -38px;
   top: 187px;
   width: 280px;
 }
 
 .score-phone {
   position: absolute;
-  left: -90px;
+  left: auto;
   top: 29px;
   width: 260px;
   height: 537px;
@@ -1084,6 +1087,8 @@ section{
   border: 3.66px solid #292826;
   border-radius: 41px;
   overflow: hidden;
+  right: 145px;
+ 
 }
 
 .score-phone img {
