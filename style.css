@@ -1280,18 +1280,11 @@ section.hero{
 
 
 .process-step-img.step-dark-bg {
-  background: url('./images/lunch-bg.png') no-repeat center center; 
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
+  background: url('./images/lunch-bg.png') no-repeat center center; background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
   padding: 48px 32px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .step-number-badge {
