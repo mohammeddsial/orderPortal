@@ -1225,6 +1225,18 @@ section.hero{
   background:transparent;
 
 }
+.step-badges-simple{
+  border-radius: 16px;
+border: 1px solid rgba(255, 255, 255, 0.16);
+background: rgba(229, 220, 220, 0.80);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
 /* The main white card (Everything your restaurant needs...) */
 .process-info-card {
   position: absolute;
