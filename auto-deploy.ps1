@@ -36,7 +36,7 @@ while ($true) {
             if ($LASTEXITCODE -eq 0) {
                 Write-Host "✅ Vercel production deployment done" -ForegroundColor Green
             } else {
-                Write-Host "⚠️ Vercel deploy failed. Make sure you have run 'vercel link' and are logged in." -ForegroundColor Yellow
+                Write-Host "⚠️ Vercel deploy failed. Run 'vercel link' first or check token." -ForegroundColor Yellow
             }
         }
     }
