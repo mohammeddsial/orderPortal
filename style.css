@@ -1143,6 +1143,7 @@ section.hero{
 }
 
 .process-step-content {
+  background: #F5F5F5;
   padding: 64px;
   display: flex;
   width: 100%;
@@ -1183,7 +1184,7 @@ section.hero{
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 48px;
+  width:62px;
   height: 48px;
   background: #fff;
   border-radius: 16px;
