@@ -1275,13 +1275,16 @@ section.hero{
 /* === Process Step 03 – Dark Themed === */
 .process-step.step-dark{
   position: relative;
+  overflow: hidden;
 }
 .process-step.step-dark {
   background: url(./images/lunch-bg.png) no-repeat center center;
-  border-radius: 24px;
-  overflow: hidden;
+ 
   display: flex;
   flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   /* left: cocktail/badges, right: text */
 }
 
