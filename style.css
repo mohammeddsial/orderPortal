@@ -1254,9 +1254,12 @@ gap: 20px;
 }
 .badge-simple .badge-value{
   color: #000;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14x;
+  font-weight: 700;
   line-height: 24px;
+}
+.badge-simple.type-2 .badge-value{
+  font-size: 32px;
 }
 /* The main white card (Everything your restaurant needs...) */
 .process-info-card {
