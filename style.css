@@ -1277,7 +1277,7 @@ section.hero{
   position: relative;
   overflow: hidden;
 }
-.process-step.step-dark {
+.process-step-img.step-dark {
   background: url(./images/lunch-bg.png) no-repeat center center;
  
   display: flex;
