@@ -1149,7 +1149,9 @@ section.hero{
   overflow: visible;
   border-radius: 24px;
 }
-
+.iphone-in-image{
+  right: 100px; bottom: 13px; height: 416px;
+}
 .process-step-content {
   background: #F5F5F5;
   padding: 64px;
