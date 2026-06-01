@@ -1336,7 +1336,7 @@ gap: 20px;
 
 /* === Process Step 03 – Dark Themed === */
 .process-step.step-dark{
-  
+  display: flex;
   position: relative;
   overflow: hidden;
   width: 100%;
