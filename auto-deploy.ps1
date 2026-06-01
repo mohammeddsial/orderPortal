@@ -32,12 +32,12 @@ while ($true) {
             
             # ---- Deploy to Vercel after successful push ----
             Write-Host "🚀 Deploying to Vercel..." -ForegroundColor Magenta
-            vercel --prod --yes
-            if ($LASTEXITCODE -eq 0) {
-                Write-Host "✅ Vercel deployment triggered" -ForegroundColor Green
-            } else {
-                Write-Host "⚠️ Vercel deploy failed (run 'vercel link' first or check token)" -ForegroundColor Yellow
-            }
+           vercel --prod --yes
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "✅ Vercel production deployment done" -ForegroundColor Green
+} else {
+    Write-Host "⚠️ Vercel deploy failed (run 'vercel link' first or check token)" -ForegroundColor Yellow
+}
         }
     }
     Start-Sleep -Seconds $waitSeconds
