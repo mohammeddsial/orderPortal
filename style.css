@@ -1280,8 +1280,7 @@ section.hero{
 
 
 .process-step-img.step-dark-bg {
-  background: url(./images/lunch-bg.png) no-repeat center center;
- 
+  background: url('./images/lunch-bg.png') no-repeat center center; 
   display: flex;
   flex-direction: column;
   background-size: cover;
