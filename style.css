@@ -1172,7 +1172,12 @@ section.hero{
   letter-spacing: -1px;
   margin-bottom: 16px;
 }
-
+.process-step-title.dark{
+  color: #fff;
+}
+.process-step-desc.dark{
+  color: #fff;
+}
 .process-step-desc {
   font-size: 18px;
   color: #475467;
