@@ -1242,14 +1242,9 @@ gap: 20px;
 }
 .badge-simple.type-1{
  display: flex;
- flex-direction: row;
+ flex-direction: column;
  align-items: center;
  justify-content: center;
- gap: 8px;
-}
-.badge-simple .badge-icon{
-  width: 24px;
-  height: 24px;
 }
 .badge-simple .badge-label{
   color: #000;
