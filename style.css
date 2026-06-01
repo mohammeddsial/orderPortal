@@ -1158,12 +1158,12 @@ section.hero{
 }
 .iphone-in-image.right{
   right: 100px;
-  bottom: -80px;
+  
 }
 .iphone-in-image.left{
   right: auto;
   left: 20px;
-  bottom: -80px;
+  
 }
 .process-step-content {
   background: #F5F5F5;
@@ -3295,7 +3295,15 @@ footer {
   .app-demo-img-pink {
     height: 160px;
   }
-
+  .iphone-in-image.right{
+    right: 100px;
+    bottom: -80px;
+  }
+  .iphone-in-image.left{
+    right: auto;
+    left: 20px;
+    bottom: -80px;
+  }
   .o-notif {
     padding: 14px 16px;
     bottom: 12px;
