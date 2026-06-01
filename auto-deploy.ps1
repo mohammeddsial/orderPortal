@@ -45,3 +45,11 @@ while ($true) {
     
     Start-Sleep -Seconds $waitSeconds
 }
+
+# Deploy to Vercel
+vercel --prod --yes
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "✅ Vercel deployment triggered" -ForegroundColor Magenta
+} else {
+    Write-Host "⚠️ Vercel deploy failed (run 'vercel link' first)" -ForegroundColor Yellow
+}
